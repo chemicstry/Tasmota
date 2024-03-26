@@ -1240,4 +1240,13 @@
 #define D_SENSOR_PIPSOLAR_TX             "Pipsolar TX"
 #define D_SENSOR_PIPSOLAR_RX             "Pipsolar RX"
 
+// xdrv_91_layzspa.ino
+#define D_GPIO_LAYZSPA_CIO_DATA          "LayZSpa CIO DATA"
+#define D_GPIO_LAYZSPA_CIO_CLK           "LayZSpa CIO CLK"
+#define D_GPIO_LAYZSPA_CIO_CS            "LayZSpa CIO CS"
+#define D_GPIO_LAYZSPA_DSP_DATA          "LayZSpa DSP DATA"
+#define D_GPIO_LAYZSPA_DSP_CLK           "LayZSpa DSP CLK"
+#define D_GPIO_LAYZSPA_DSP_CS            "LayZSpa DSP CS"
+#define D_GPIO_LAYZSPA_DSP_AUDIO         "LayZSpa DSP AUDIO"
+
 #endif  // _LANGUAGE_EN_GB_H_

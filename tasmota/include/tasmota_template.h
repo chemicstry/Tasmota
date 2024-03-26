@@ -217,6 +217,7 @@ enum UserSelectablePins {
   GPIO_MAGIC_SWITCH,                    // MagicSwitch as in Sonoff BasicR4
   GPIO_PIPSOLAR_TX, GPIO_PIPSOLAR_RX,   // pipsolar inverter
   GPIO_LORA_CS, GPIO_LORA_RST, GPIO_LORA_BUSY, GPIO_LORA_DI0, GPIO_LORA_DI1, GPIO_LORA_DI2, GPIO_LORA_DI3, GPIO_LORA_DI4, GPIO_LORA_DI5,  // LoRa SPI
+  GPIO_LAYZSPA_CIO_DATA, GPIO_LAYZSPA_CIO_CLK, GPIO_LAYZSPA_CIO_CS, GPIO_LAYZSPA_DSP_DATA, GPIO_LAYZSPA_DSP_CLK, GPIO_LAYZSPA_DSP_CS, GPIO_LAYZSPA_DSP_AUDIO, // Lay-Z-Spa
   GPIO_SENSOR_END };
 
 // Error as warning to rethink GPIO usage with max 2045
@@ -481,6 +482,7 @@ const char kSensorNames[] PROGMEM =
   D_GPIO_MAGIC_SWITCH "|"
   D_SENSOR_PIPSOLAR_TX "|" D_SENSOR_PIPSOLAR_RX "|"
   D_GPIO_LORA_CS "|" D_GPIO_LORA_RST "|" D_GPIO_LORA_BUSY "|" D_GPIO_LORA_DI "0|" D_GPIO_LORA_DI "1|" D_GPIO_LORA_DI "2|" D_GPIO_LORA_DI "3|" D_GPIO_LORA_DI "4|" D_GPIO_LORA_DI "5|"
+  D_GPIO_LAYZSPA_CIO_DATA "|" D_GPIO_LAYZSPA_CIO_CLK "|" D_GPIO_LAYZSPA_CIO_CS "|" D_GPIO_LAYZSPA_DSP_DATA "|" D_GPIO_LAYZSPA_DSP_CLK "|" D_GPIO_LAYZSPA_DSP_CS "|" D_GPIO_LAYZSPA_DSP_AUDIO "|"
   ;
 
 const char kSensorNamesFixed[] PROGMEM =
@@ -1166,6 +1168,16 @@ const uint16_t kGpioNiceList[] PROGMEM = {
 #ifdef USE_PIPSOLAR                       // xdrv_92_pipsolar.ino
   AGPIO(GPIO_PIPSOLAR_TX),                // pipsolar inverter Serial interface
   AGPIO(GPIO_PIPSOLAR_RX),                // pipsolar inverter Serial interface
+#endif
+
+#ifdef USE_LAYZSPA
+  AGPIO(GPIO_LAYZSPA_CIO_DATA),
+  AGPIO(GPIO_LAYZSPA_CIO_CLK),
+  AGPIO(GPIO_LAYZSPA_CIO_CS),
+  AGPIO(GPIO_LAYZSPA_DSP_DATA),
+  AGPIO(GPIO_LAYZSPA_DSP_CLK),
+  AGPIO(GPIO_LAYZSPA_DSP_CS),
+  AGPIO(GPIO_LAYZSPA_DSP_AUDIO),
 #endif
 
 /*-------------------------------------------------------------------------------------------*\

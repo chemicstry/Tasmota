@@ -70,5 +70,9 @@
         "tooltip": "PlatformIO: Rebuild IntelliSense Index",
         "commands": "platformio-ide.rebuildProjectIndex"
       }
-    ]
+    ],
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "files.associations": {
+      "functional": "cpp"
+    }
   }
